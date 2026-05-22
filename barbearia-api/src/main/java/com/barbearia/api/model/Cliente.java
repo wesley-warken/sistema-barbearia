@@ -6,6 +6,9 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
+/**
+ * Entidade que representa um cliente cadastrado na barbearia.
+ */
 @Entity
 @Table(name = "clientes")
 public class Cliente {
@@ -18,11 +21,12 @@ public class Cliente {
     private String cpf;
     private String email;
 
-    // Construtor vazio (obrigatório para o banco de dados)
+    /**
+     * Construtor padrão exigido pela especificação JPA.
+     */
     public Cliente() {
     }
 
-    // Getters e Setters
     public Long getId() {
         return id;
     }

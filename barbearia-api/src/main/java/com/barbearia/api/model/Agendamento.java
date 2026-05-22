@@ -9,6 +9,9 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import java.time.LocalDateTime;
 
+/**
+ * Entidade que representa um agendamento de serviço na barbearia.
+ */
 @Entity
 @Table(name = "agendamentos")
 public class Agendamento {
@@ -23,11 +26,12 @@ public class Agendamento {
     @JoinColumn(name = "cliente_id")
     private Cliente cliente;
 
-    // Construtor vazio
+    /**
+     * Construtor padrão exigido pela especificação JPA.
+     */
     public Agendamento() {
     }
 
-    // Getters e Setters
     public Long getId() {
         return id;
     }
